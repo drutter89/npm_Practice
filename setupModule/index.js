@@ -2,18 +2,20 @@
 // parameter and stores it in a list. The list should not be accessible 
 // from outside the module.
 
-
+var list = [];
 function listNum(x) {
-    var x = num;
-    var list = [];
     list.push(x);
     return list;
+
   }
-  
+
+  function orderList() {
+    return list.sort();
+  }
+
   module.exports = {
-    PHI: 1.618,
-    explain: function() {
-      console.log("We are trying to list" + this.list);
-    },
-   
+
+    listNum: listNum,
+    orderList: orderList
+    
   };
